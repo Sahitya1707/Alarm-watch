@@ -1,0 +1,356 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Combo", cursive;
+}
+.hidden {
+  display: none;
+}
+
+.alarm {
+  background-color: red;
+  height: 92vh;
+  width: 100vw;
+  /* margin: auto; */
+  display: flex;
+  background-image: url(../images/background1.webp);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+.clock {
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  border: 2px solid rgb(242, 46, 238);
+  height: 500px;
+  width: 500px;
+  /* margin: auto; */
+  background-image: url(../images/background.jpg);
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-transform: uppercase;
+}
+.seconds,
+.minutes,
+.hours,
+.time-format,
+.year,
+.month,
+.day,
+span {
+  display: inline;
+  color: rgb(8, 234, 215);
+  font-weight: bold;
+  /* font-size: 1.5rem; */
+  /* padding: auto; */
+}
+.time {
+  font-size: 2rem;
+}
+.date {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+.set-alarm {
+  position: absolute;
+  bottom: 10px;
+  left: 25px;
+  /* right: 50%; */
+}
+.del-alarm {
+  position: absolute;
+  bottom: 10px;
+  right: 25px;
+}
+.buttons button,
+.alarmstop {
+  text-transform: uppercase;
+  color: red;
+  font-family: "Combo", cursive;
+  background-color: rgba(21, 255, 0, 0.516);
+  border-radius: 6px;
+  width: 9rem;
+  height: 2rem;
+  margin: 1rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border: 1px solid rgb(111, 0, 255);
+}
+.alarmstop {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  animation: shake 0.5s infinite;
+}
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(2deg);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(-2deg);
+  }
+  40% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  70% {
+    transform: rotate(-2deg);
+  }
+  80% {
+    transform: rotate(0deg);
+  }
+  90% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.buttons button:hover,
+.alarmstop:hover {
+  background-color: rgba(21, 255, 0, 0.785);
+  transition: all 0.4s ease-in-out;
+}
+.preview-alarm {
+  position: fixed;
+  width: 700px;
+  height: 700px;
+  background-color: rgba(255, 255, 0, 0.452);
+  transition: all 0.5s ease-in-out;
+  border-radius: 10px;
+  /* top: 30px; */
+  /* left: 29px; */
+}
+.text,
+.set-time,
+.selectsong,
+.ok {
+  transition: all 1s ease-in-out;
+}
+.text,
+.selectsong {
+  /* margin: auto; */
+  text-align: center;
+  font-size: 1.2rem;
+  color: rgb(8, 234, 215);
+  position: relative;
+}
+.text::after,
+.selectsong::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 1.5rem;
+  margin: 0 auto;
+  height: 1px;
+  background-color: red;
+}
+.text::after {
+  width: 5rem;
+}
+.selectsong::after {
+  width: 7rem;
+}
+.set-time {
+  /* top: 0; */
+  display: flex;
+  width: 600px;
+  background-color: rgb(4, 25, 33);
+  height: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin: auto; */
+  margin-top: -0.3rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: 1px solid white;
+  position: relative;
+}
+.alarm-hour,
+.alarm-minute {
+  position: relative;
+}
+select {
+  width: 70px;
+  margin-left: 0.5rem;
+  color: blue;
+  font-size: 1rem;
+  font-family: "Combo", cursive;
+  /* text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4); */
+  background-color: rgb(102, 255, 0);
+}
+.alarm-hour::after {
+  content: "Hr";
+}
+.alarm-minute::after {
+  content: "MIN";
+}
+
+.alarm-hour::after,
+.alarm-minute::after {
+  position: absolute;
+  left: 35px;
+  /* right: 0;
+  margin: 0 auto; */
+  top: 30px;
+
+  color: red;
+}
+.box {
+  border: 2px solid white;
+  width: 600px;
+  margin: auto;
+  border-radius: 10px;
+  /* background-color: rgb(0, 255, 110); */
+  background-color: rgba(4, 25, 33, 0.505);
+}
+.song {
+  display: flex;
+  margin: 0 auto;
+  height: 4rem;
+  width: 550px;
+  border-radius: 10px;
+  background-color: rgba(0, 234, 255, 0.56);
+  /* border: 1px solid white; */
+  margin-top: 0.4rem;
+  margin-bottom: 0.2rem;
+  position: relative;
+  /* cursor: pointer; */
+}
+.songSelection {
+  position: relative;
+
+  /* top: 0rem; */
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+
+  width: 60%;
+}
+
+.audioname {
+  position: absolute;
+  animation: run 9s linear infinite;
+  font-size: 1rem;
+  color: rgb(4, 25, 33);
+  font-weight: bold;
+}
+@keyframes run {
+  0% {
+    right: 0;
+    opacity: 1;
+  }
+  50% {
+    right: 50%;
+    opacity: 0.3;
+  }
+  80% {
+    right: 60%;
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.active {
+  border: 2px solid rgb(102, 255, 0);
+}
+/* .songSelection {
+  height: 10rem;
+  width: 20rem;
+  background-color: red;
+} */
+
+.audio p {
+  cursor: pointer;
+  /* bottom: 0.1rem; */
+}
+.play,
+.pause {
+  position: absolute;
+  right: 20px;
+}
+.song p span {
+  font-size: 2rem;
+  color: rgb(242, 46, 238);
+}
+.song p span:hover {
+  transition: all 0.6s ease-in-out;
+  color: rgb(107, 33, 106);
+}
+.on,
+.off {
+  position: absolute;
+  right: 80px;
+}
+.ok {
+  position: absolute;
+  right: 20px;
+  text-transform: uppercase;
+  color: red;
+  font-family: "Combo", cursive;
+  background-color: rgba(21, 255, 0, 0.516);
+  border-radius: 6px;
+  width: 7rem;
+  height: 2rem;
+  margin: 1rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-weight: bold;
+  border: 1px solid rgb(111, 0, 255);
+}
+.ok:hover {
+  background-color: rgb(29, 210, 13);
+  transition: all 0.4s ease-in-out;
+}
+.footer {
+  background-color: yellow;
+  height: 8vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.text-footer {
+  color: black;
+  text-align: center;
+  font-size: 0.73rem;
+  padding-top: auto;
+}
+.text-footer a {
+  text-decoration: none;
+  /* color: var(--text-color); */
+  color: rgb(8, 234, 215);
+  text-decoration: underline;
+  letter-spacing: 0.1rem;
+}
+.text-footer a:hover {
+  transition: 0.8s ease-in-out;
+  text-decoration: none;
+}
