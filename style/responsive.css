@@ -1,0 +1,92 @@
+@media (max-width: 800px) {
+  .preview-alarm {
+    width: 550px;
+    height: 600px;
+  }
+  .set-time {
+    width: 300px;
+  }
+  .box {
+    width: 500px;
+  }
+  .song {
+    width: 300px;
+    height: 3rem;
+  }
+  .audioname {
+    font-size: 0.7rem;
+  }
+  .song p span {
+    font-size: 1rem;
+  }
+  .on,
+  .off {
+    right: 50px;
+  }
+}
+@media (max-width: 600px) {
+  .clock {
+    height: 350px;
+    width: 350px;
+  }
+  .time {
+    font-size: 1rem;
+  }
+  .buttons button,
+  .alarmstop {
+    font-size: 0.7rem;
+    width: 5.5rem;
+  }
+  .preview-alarm {
+    width: 440px;
+    height: 550px;
+  }
+  .set-time {
+    width: 300px;
+    height: 3rem;
+  }
+  .alarm-hour::after,
+  .alarm-minute::after {
+    font-size: 0.5rem;
+  }
+  .box {
+    width: 400px;
+  }
+  .song {
+    width: 300px;
+    height: 3rem;
+  }
+  .audioname {
+    font-size: 0.7rem;
+  }
+  .song p span {
+    font-size: 1rem;
+  }
+  .on,
+  .off {
+    right: 50px;
+  }
+  .ok {
+    width: 5rem;
+    font-size: 0.8rem;
+    margin: 0.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .text-footer {
+    font-size: 0.6rem;
+  }
+  .preview-alarm {
+    width: 365px;
+    height: 500px;
+  }
+  .box {
+    width: 350px;
+  }
+  .song {
+    height: 2.4rem;
+  }
+  .ok {
+    width: 4rem;
+  }
+}
