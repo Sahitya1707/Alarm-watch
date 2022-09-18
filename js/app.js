@@ -206,7 +206,7 @@ ok.addEventListener("click", function () {
       //   off.classList.contains("hidden") == true
       // );
     }
-  }, 2000);
+  }, 10000);
 });
 // console.log(removeBtn);
 removeBtn.addEventListener("click", function () {
