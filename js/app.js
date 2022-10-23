@@ -157,6 +157,7 @@ alarmOff.forEach(function (e, i) {
     let alarmOffF = alarmOff.filter(function (e) {
       return e !== alarmOff[i];
     });
+    // console.log(alarmOff);
     for (const offAlarm of alarmOffF) {
       offAlarm.classList.remove("hidden");
     }
